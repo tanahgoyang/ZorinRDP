@@ -2,7 +2,7 @@
 
 ### Free RDP for *Education Purposes* 🎓
 
-### ==> Works For 6 hrs <==
+### ==> Works For **1 Hour** <==
 
 <br>
 
