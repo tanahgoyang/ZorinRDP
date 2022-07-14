@@ -39,7 +39,7 @@ jobs:
         copy wallpaper.png D:\a\wallpaper.png
         copy wallpaper.bat D:\a\wallpaper.bat
         copy Node.js.lnk C:\Users\Public\Desktop\Node.js.lnk
-        copy "Visual Studio 2019.lnk" "C:\Users\Public\Desktop\Visual Studio 2019.lnk"
+        copy "Visual Studio 2022.lnk" "C:\Users\Public\Desktop\Visual Studio 2022.lnk"
         copy "Change Password.exe" "C:\Users\Public\Desktop\Change Password.exe"
         copy "Clear Clipboard.lnk" "C:\Users\Public\Desktop\Clear Clipboard.lnk"
     - name: Make Tunnel.
