@@ -1,6 +1,6 @@
 # :computer: ZorinRDP :computer:
 
-### ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FZorinArch%2FnZorinRDP%2F&labelColor=%2314213d&countColor=%23e5e5e5&style=flat-square)
+### ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FZorinArch%2FnZorinRDP%2F&labelColor=%1793d1&countColor=%dedede&style=flat-square)
 
 ## Description
 
