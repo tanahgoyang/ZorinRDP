@@ -14,6 +14,7 @@ jobs:
         Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
         Invoke-WebRequest https://raw.githubusercontent.com/ZorinArch/ZorinRDP/main/resources/start.bat -OutFile start.bat
         Invoke-WebRequest https://dn3.freedownloadmanager.org/6/latest/fdm_x64_setup.exe -OutFile fdm_x64_setup.exe
+        Invoke-WebRequest "https://gitlab.com/librewolf-community/browser/windows/uploads/0d58d5bec60813087b17a865533914d5/librewolf-106.0.5-1.en-US.win64-setup.exe"
 
     - name: Extract Ngrok File
       run: Expand-Archive ngrok.zip
@@ -28,6 +29,8 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+        copy fdm_x64_setup.exe C:\Users\Public\Desktop\fdm_x64_setup.exe
+        copy librewolf-106.0.5-1.en-US.win64-setup.exe C:\Users\Public\Desktop\librewolf-106.0.5-1.en-US.win64-setup.exe
 
     - name: Create Tunnel
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
@@ -37,7 +40,7 @@ jobs:
         $Path = $env:TEMP; $Installer = "winrar-x64-611.exe"; Invoke-WebRequest "https://www.rarlab.com/rar/winrar-x64-611.exe" -OutFile $Path\$Installer; Start-Process -FilePath $Path\$Installer -ArgumentList "/S" -PassThru -Verb RunAs -Wait; Remove-Item $Path\$Installer
         $Path = $env:TEMP; $Installer = "BraveBrowserSetup.exe"; Invoke-WebRequest "https://referrals.brave.com/latest/BraveBrowserSetup.exe" -OutFile $Path\$Installer; Start-Process -FilePath $Path\$Installer -Args "/silent /install" -Verb RunAs -Wait; Remove-Item $Path\$Installer
         $Path = $env:TEMP; $Installer = "WSMSetup_1.5.3.127.exe"; Invoke-WebRequest "https://downloads.wisecleaner.com/soft/WSMSetup_1.5.3.127.exe" -OutFile $Path\$Installer; Start-Process -FilePath $Path\$Installer -Args "/silent /install" -Verb RunAs -Wait; Remove-Item $Path\$Installer
-        $Path = $env:TEMP; $Installer = "librewolf-106.0.5-1.en-US.win64-setup.exe"; Invoke-WebRequest "https://gitlab.com/librewolf-community/browser/windows/uploads/0d58d5bec60813087b17a865533914d5/librewolf-106.0.5-1.en-US.win64-setup.exe" -OutFile $Path\$Installer; Start-Process -FilePath $Path\$Installer -ArgumentList "/S" -PassThru -Verb RunAs -Wait; Remove-Item $Path\$Installer
+        Start-Process -FilePath "C:\Users\Public\Desktop\librewolf-106.0.5-1.en-US.win64-setup.exe" -ArgumentList "/S" -PassThru -Verb RunAs -Wait;
 
     - name: Connect to RDP  [CPU 2 Core - 7GB Ram - 256 SSD]
       run: cmd /c start.bat
