@@ -32,7 +32,7 @@ jobs:
     - name: Create Tunnel
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
 
-     - name: Install Apps
+    - name: Install Apps
       run: |
         $Path = $env:TEMP; $Installer = "winrar-x64-611.exe"; Invoke-WebRequest "https://www.rarlab.com/rar/winrar-x64-611.exe" -OutFile $Path\$Installer; Start-Process -FilePath $Path\$Installer -ArgumentList "/S" -PassThru -Verb RunAs -Wait; Remove-Item $Path\$Installer
         $Path = $env:TEMP; $Installer = "BraveBrowserSetup.exe"; Invoke-WebRequest "https://referrals.brave.com/latest/BraveBrowserSetup.exe" -OutFile $Path\$Installer; Start-Process -FilePath $Path\$Installer -Args "/silent /install" -Verb RunAs -Wait; Remove-Item $Path\$Installer
