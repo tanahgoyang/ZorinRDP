@@ -1,6 +1,7 @@
 # :computer: ZorinRDP :computer: 
 
-![version](https://img.shields.io/badge/version-2.0.0-blue) ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FZorin%2FZorinRDP%2F&labelColor=%2314213d&countColor=brightgreen&style=flat-square)
+![version](https://img.shields.io/badge/version-2.0.0-blue&style=?style=for-the-badge) 
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FZorinArch%2FZorinRDP&labelColor=%23697689&countColor=%230f80c1)
 
 ## Description
 
