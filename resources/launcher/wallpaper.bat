@@ -21,8 +21,8 @@ REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation /v Manufac
 REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation /v Model /t REG_SZ /d "AdHost Virtual Machine" /f
 REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation /v SupportURL /t REG_SZ /d "https://github.com/ZorinArch/ZorinRDP/issues" /f
 REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v TaskbarSmallIcons /t REG_DWORD /d 1 /f
-powershell -Command "& {Invoke-WebRequest https://github.com/ZorinArch/ZorinRDP/blob/main/wallpaper.png}"
-@D:\a\wallpaper\wallpaper.exe D:\a\wallpaper\wallpaper.png /timer:0
+powershell -Command "& {Invoke-WebRequest https://github.com/ZorinArch/ZorinRDP/blob/main/wallpaper.jpg}"
+@D:\a\wallpaper\wallpaper.exe D:\a\wallpaper\wallpaper.jpg /timer:0
 @RD /S /Q wallpaper
 RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
 taskkill /f /im explorer.exe

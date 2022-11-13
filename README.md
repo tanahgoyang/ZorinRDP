@@ -1,45 +1,37 @@
 # :computer: ZorinRDP :computer:
 
-### Free RDP for *Education Purposes* 🎓
+### ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fadtitas%2Fngrok-rdp%2F&labelColor=%2314213d&countColor=%23e5e5e5&style=flat-square)
 
-### ==> Works For **1 Hour** <==
+## Description
 
-<br>
+**What is RDP?**<br>
 
-### ⚙ HOW TO CREATE ZorinRDP ⚙
-```
-> Press the Fork button to create RDP (For Android / HP Users, Please Use Desktop Mode).
+* RDP (Remote Desktop Protocol) is a network communications protocol developed by Microsoft, which allows users to connect to another computer from a remote location.
 
-> visit https://dashboard.ngrok.com to get NGROK_AUTH_TOKEN
+**How long does this RDP stay active?**<br>
 
-> Inside this Repo Go to Settings> Secrets> New repository secret
+* This RDP stays active for up to 1 hour (previously 5-6 hours).<br>
 
-> Fill in the Name: Enter NGROK_AUTH_TOKEN
+## How to use it?
 
-> Fill in Value: Visit https://dashboard.ngrok.com/auth/your-authtoken Copy and Paste in the value
+#### First Step
 
-> Press Add secret 
+1. Press the **fork** button  
+2. Login or signup to ngrok: https://ngrok.com
+3. Now visit here for token: https://dashboard.ngrok.com/auth/your-authtoken
+   
+   > You'll get token from here. It'll be needed to the next step.
 
-> Go to Action> CI> Run workflow
+#### Second Step
 
-> Refresh Web and go to CI> build
+1. In your forked repo: **Go to Settings > Secrets > Action > New Repository Secret**
+2. In the name section, enter this text: **NGROK_AUTH_TOKEN**
+3. In the value section, enter the **ngrok token**
+4. Then press **Add Secret**
+5. Now go to **Action > ZorinRDP (Left Menu) > Run Workflow**
+6. Refresh the page and go to **ZorinRDP > build** option
+7. You'll get IP, Username & Password from **Connect to RDP** section.
 
-> Press Down facing arrow button "RDP INFO LOGIN" To Get IP, User, Password.
-```
-
-### RDP Specs :computer:
-```
-CPU 2 core - 7GB Ram - 256 SSD
-```
-
-### ⚠ WARNING ⚠
-
-
-=> Don't edit Anything to keep running without any error.
-
-=> This is only for education purposes.
-
-=>  Do not use it for mining or illegal use.
-
+ 
 
 
