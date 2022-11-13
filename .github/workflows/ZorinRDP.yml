@@ -40,7 +40,7 @@ jobs:
         $Path = $env:TEMP; $Installer = "winrar-x64-611.exe"; Invoke-WebRequest "https://www.rarlab.com/rar/winrar-x64-611.exe" -OutFile $Path\$Installer; Start-Process -FilePath $Path\$Installer -ArgumentList "/S" -PassThru -Verb RunAs -Wait; Remove-Item $Path\$Installer
         $Path = $env:TEMP; $Installer = "BraveBrowserSetup.exe"; Invoke-WebRequest "https://referrals.brave.com/latest/BraveBrowserSetup.exe" -OutFile $Path\$Installer; Start-Process -FilePath $Path\$Installer -Args "/silent /install" -Verb RunAs -Wait; Remove-Item $Path\$Installer
         $Path = $env:TEMP; $Installer = "WSMSetup_1.5.3.127.exe"; Invoke-WebRequest "https://downloads.wisecleaner.com/soft/WSMSetup_1.5.3.127.exe" -OutFile $Path\$Installer; Start-Process -FilePath $Path\$Installer -Args "/silent /install" -Verb RunAs -Wait; Remove-Item $Path\$Installer
-        Start-Process -FilePath "C:\Users\Zorin\Downloads\librewolf-106.0.5-1.en-US.win64-setup.exe" -ArgumentList "/S" -PassThru
+        Start-Process -FilePath "C:\Users\Public\Downloads\librewolf-106.0.5-1.en-US.win64-setup.exe" -ArgumentList "/S" -PassThru
         
 
     - name: Connect to RDP  [CPU 2 Core - 7GB Ram - 256 SSD]
