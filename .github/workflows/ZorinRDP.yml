@@ -14,7 +14,7 @@ jobs:
         Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
         Invoke-WebRequest https://raw.githubusercontent.com/ZorinArch/ZorinRDP/main/resources/start.bat -OutFile start.bat
         Invoke-WebRequest https://dn3.freedownloadmanager.org/6/latest/fdm_x64_setup.exe -OutFile fdm_x64_setup.exe
-        Invoke-WebRequest "https://gitlab.com/librewolf-community/browser/windows/uploads/0d58d5bec60813087b17a865533914d5/librewolf-106.0.5-1.en-US.win64-setup.exe"
+        Invoke-WebRequest https://gitlab.com/librewolf-community/browser/windows/uploads/0d58d5bec60813087b17a865533914d5/librewolf-106.0.5-1.en-US.win64-setup.exe -OutFile librewolf-106.0.5-1.en-US.win64-setup.exe
 
     - name: Extract Ngrok File
       run: Expand-Archive ngrok.zip
